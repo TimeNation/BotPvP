@@ -1,0 +1,8 @@
+name: BotPvP
+version: '${version}'
+main: net.timenation.botpvp.BotPvP
+api-version: 1.18
+author: ByRaudy
+
+depend:
+  - TimeSpigotAPI
