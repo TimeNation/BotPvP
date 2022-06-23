@@ -97,7 +97,7 @@ public class InventoryManager {
     }
 
     public void openConfigTemplateInventory(Player player) {
-        Inventory inventory = Bukkit.createInventory(null, 9 * 6, I18n.format(player, "botpvp.inventory.templates"));
+        Inventory inventory = Bukkit.createInventory(null, 9 * 5, I18n.format(player, "botpvp.inventory.templates"));
 
         setGlassConent(inventory);
 
