@@ -30,7 +30,7 @@ public final class BotPvP extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-        prefix = TimeSpigotAPI.getInstance().getColorAPI().process("<GRADIENT:3653bf>BotPvP »</GRADIENT:566ec4> §7");
+        prefix = TimeSpigotAPI.getInstance().getColorAPI().process("§8» <GRADIENT:3653bf>§lBotPvP</GRADIENT:566ec4> §8- §7");
         gameManager = new GameManager();
         inventoryManager = new InventoryManager();
         scoreboardManager = new ScoreboardManager();
@@ -45,6 +45,7 @@ public final class BotPvP extends JavaPlugin {
             world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false);
             world.setGameRule(GameRule.DO_WEATHER_CYCLE, false);
             world.setTime(10000);
+            world.setThundering(false);
         });
 
         PluginManager pluginManager = Bukkit.getPluginManager();

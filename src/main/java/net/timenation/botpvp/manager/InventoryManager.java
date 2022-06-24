@@ -7,7 +7,6 @@ import net.timenation.botpvp.manager.kit.KitType;
 import net.timenation.botpvp.manager.map.MapConfig;
 import net.timenation.timespigotapi.TimeSpigotAPI;
 import net.timenation.timespigotapi.manager.ItemManager;
-import net.timenation.timespigotapi.manager.game.manager.ConfigManager;
 import net.timenation.timespigotapi.manager.language.I18n;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
@@ -17,22 +16,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 
-import java.awt.*;
 import java.io.File;
 
 public class InventoryManager {
-
-    public void openInvitePlayerInventory(Player player) {
-        Inventory inventory = Bukkit.createInventory(null, 9 * 5, I18n.format(player, "botpvp.inventory.invite"));
-
-        setGlassConent(inventory);
-
-        inventory.setItem(20, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(player, "botpvp.inventory.invite.item.invite")).build());
-        inventory.setItem(24, new ItemManager(Material.PIGLIN_BANNER_PATTERN, 1).setDisplayName(I18n.format(player, "botpvp.inventory.invite.item.listplayers")).build());
-
-        player.openInventory(inventory);
-        player.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 100, 2);
-    }
 
     public void openPlayerListInventory(Player player) {
         Inventory inventory = Bukkit.createInventory(null, 9 * 3, I18n.format(player, "botpvp.inventory.invite.playerlist"));
@@ -91,8 +77,8 @@ public class InventoryManager {
         inventory.setItem(34, new ItemManager(Material.TOTEM_OF_UNDYING, 1).setDisplayName(I18n.format(player, "botpvp.inventory.bot.item.lives")).setLore(I18n.formatLines(player, "botpvp.inventory.bot.lore.full", ChatColor.of("#eb4034"), botConfig.getLives())).build());
         inventory.setItem(43, new ItemManager(Material.PLAYER_HEAD, 1).setDisplayName(I18n.format(player, "botpvp.inventory.bot.item.skin")).setSkullOwner(botConfig.getSkin()).setLore(" §8● " + ChatColor.of("#edc945") + TimeSpigotAPI.getInstance().getUuidFetcher().getName(botConfig.getSkin()), "\n \n", I18n.format(player, "botpvp.inventory.bot.lore.skin")).build());
         inventory.setItem(49, new ItemManager(Material.GLOBE_BANNER_PATTERN, 1).setDisplayName(I18n.format(player, "botpvp.inventory.bot.item.template")).setLore(I18n.formatLines(player, "botpvp.inventory.bot.lore.template")).build());
-        player.openInventory(inventory);
 
+        player.openInventory(inventory);
         if(sound) player.playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 100, 2);
     }
 

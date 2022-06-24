@@ -137,11 +137,15 @@ public class InventoryClickListener implements Listener {
                 case GREEN_CONCRETE -> {
                     GameManager gameManager = BotPvP.getInstance().getGameManager();
                     BotConfig botConfig = BotPvP.getInstance().getGameManager().getBotConfig();
-                    gameManager.setBots(2);
+                    gameManager.setBots(1);
                     botConfig.setRange(5);
                     botConfig.setSpeed(0.35);
-                    botConfig.setLives(60);
+                    botConfig.setLives(30);
                     botConfig.setWeapon(new ItemManager(Material.IRON_SWORD, 1).build());
+                    botConfig.setChestplate(new ItemManager(Material.IRON_CHESTPLATE, 1).build());
+                    botConfig.setLeggings(new ItemManager(Material.BARRIER, 1).build());
+                    botConfig.setBoots(new ItemManager(Material.BARRIER, 1).build());
+
 
                     player.sendMessage(I18n.format(player, "botpvp.messages.succes.template", BotPvP.getInstance().getPrefix()));
                     player.closeInventory();
@@ -152,7 +156,7 @@ public class InventoryClickListener implements Listener {
                     gameManager.setBots(5);
                     botConfig.setRange(5);
                     botConfig.setSpeed(0.45);
-                    botConfig.setLives(80);
+                    botConfig.setLives(60);
                     botConfig.setWeapon(new ItemManager(Material.IRON_SWORD, 1).build());
                     botConfig.setChestplate(new ItemManager(Material.IRON_CHESTPLATE, 1).build());
                     botConfig.setBoots(new ItemManager(Material.IRON_BOOTS, 1).build());

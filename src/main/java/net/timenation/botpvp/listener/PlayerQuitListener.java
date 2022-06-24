@@ -33,7 +33,7 @@ public class PlayerQuitListener implements Listener {
                     newOwner.playSound(newOwner.getLocation(), Sound.BLOCK_BREWING_STAND_BREW, 2, 0);
 
                     newOwner.getInventory().clear();
-                    newOwner.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(player, "botpvp.item.invite")).build());
+                    newOwner.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(player, "botpvp.item.playerlist")).build());
                     newOwner.getInventory().setItem(3, new ItemManager(Material.END_CRYSTAL, 1).setDisplayName(I18n.format(player, "botpvp.item.start")).build());
                     newOwner.getInventory().setItem(5, new ItemManager(Material.BIG_DRIPLEAF, 1).setDisplayName(I18n.format(player, "botpvp.item.map")).build());
                     newOwner.getInventory().setItem(6, new ItemManager(Material.COMMAND_BLOCK, 1).setDisplayName(I18n.format(player, "botpvp.item.configirate")).build());

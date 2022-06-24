@@ -26,7 +26,7 @@ public class PlayerInteractListener implements Listener {
             if(BotPvP.getInstance().getGameManager().getGameState() == GameState.LOBBY) {
                 if (BotPvP.getInstance().getGameManager().getGameOwner() == player.getUniqueId()) {
                     switch (event.getItem().getType()) {
-                        case FIREWORK_ROCKET -> BotPvP.getInstance().getInventoryManager().openInvitePlayerInventory(player);
+                        case FIREWORK_ROCKET -> BotPvP.getInstance().getInventoryManager().openPlayerListInventory(player);
                         case END_CRYSTAL -> BotPvP.getInstance().getGameManager().startGame();
                         case BIG_DRIPLEAF -> BotPvP.getInstance().getInventoryManager().openSelectMapInventory(player);
                         case COMMAND_BLOCK -> BotPvP.getInstance().getInventoryManager().openConfigurateBotInventory(player, true);

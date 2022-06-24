@@ -45,7 +45,7 @@ public class GameListener implements Listener {
 
                 if (BotPvP.getInstance().getGameManager().getGameOwner() == player.getUniqueId()) {
 
-                    player.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(player, "botpvp.item.invite")).build());
+                    player.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(player, "botpvp.item.playerlist")).build());
                     player.getInventory().setItem(3, new ItemManager(Material.END_CRYSTAL, 1).setDisplayName(I18n.format(player, "botpvp.item.start")).build());
                     player.getInventory().setItem(5, new ItemManager(Material.BIG_DRIPLEAF, 1).setDisplayName(I18n.format(player, "botpvp.item.map")).build());
                     player.getInventory().setItem(6, new ItemManager(Material.COMMAND_BLOCK, 1).setDisplayName(I18n.format(player, "botpvp.item.configirate")).build());
@@ -97,7 +97,7 @@ public class GameListener implements Listener {
                     players.teleport(new Location(Bukkit.getWorld("world"), 0.5, 66, 0.5));
 
                     if (BotPvP.getInstance().getGameManager().getGameOwner() == players.getUniqueId()) {
-                        players.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(players, "botpvp.item.invite")).build());
+                        players.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(players, "botpvp.item.playerlist")).build());
                         players.getInventory().setItem(3, new ItemManager(Material.END_CRYSTAL, 1).setDisplayName(I18n.format(players, "botpvp.item.start")).build());
                         players.getInventory().setItem(5, new ItemManager(Material.BIG_DRIPLEAF, 1).setDisplayName(I18n.format(players, "botpvp.item.map")).build());
                         players.getInventory().setItem(6, new ItemManager(Material.COMMAND_BLOCK, 1).setDisplayName(I18n.format(players, "botpvp.item.configirate")).build());

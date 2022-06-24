@@ -36,7 +36,7 @@ public class PlayerJoinListener implements Listener {
             BotPvP.getInstance().getInventoryManager().openConfigTemplateInventory(player);
             player.sendMessage(I18n.format(player, "botpvp.messages.join.owner", BotPvP.getInstance().getPrefix()));
 
-            player.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(player, "botpvp.item.invite")).build());
+            player.getInventory().setItem(2, new ItemManager(Material.FIREWORK_ROCKET, 1).setDisplayName(I18n.format(player, "botpvp.item.playerlist")).build());
             player.getInventory().setItem(3, new ItemManager(Material.END_CRYSTAL, 1).setDisplayName(I18n.format(player, "botpvp.item.start")).build());
             player.getInventory().setItem(5, new ItemManager(Material.BIG_DRIPLEAF, 1).setDisplayName(I18n.format(player, "botpvp.item.map")).build());
             player.getInventory().setItem(6, new ItemManager(Material.COMMAND_BLOCK, 1).setDisplayName(I18n.format(player, "botpvp.item.configirate")).build());
