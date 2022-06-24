@@ -23,6 +23,8 @@ public class PlayerQuitListener implements Listener {
                 case 1 -> {
                     BotPvP.getInstance().getGameManager().setGameOwner(null);
                     BotPvP.getInstance().getGameManager().setDefault();
+                    BotPvP.getInstance().getGameManager().getBotManager().getBotList().forEach(entity -> entity.remove());
+                    BotPvP.getInstance().getGameManager().getBotManager().getBotList().clear();
                     CloudAPI.getInstance().getCloudServiceManager().getCloudServiceByName(CloudAPI.getInstance().getThisSidesName()).setProperty("active_joinme", false);
                     CloudAPI.getInstance().getCloudServiceManager().getCloudServiceByName(CloudAPI.getInstance().getThisSidesName()).update();
                 }
