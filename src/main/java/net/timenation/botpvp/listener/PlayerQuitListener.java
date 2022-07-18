@@ -1,6 +1,7 @@
 package net.timenation.botpvp.listener;
 
 import eu.thesimplecloud.api.CloudAPI;
+import eu.thesimplecloud.api.service.ServiceState;
 import net.timenation.botpvp.BotPvP;
 import net.timenation.timespigotapi.manager.ItemManager;
 import net.timenation.timespigotapi.manager.language.I18n;
@@ -21,6 +22,7 @@ public class PlayerQuitListener implements Listener {
         if (BotPvP.getInstance().getGameManager().getGameOwner() == player.getUniqueId()) {
             switch (Bukkit.getOnlinePlayers().size()) {
                 case 1 -> {
+                    CloudAPI.getInstance().getCloudServiceManager().getCloudServiceByName(CloudAPI.getInstance().getThisSidesName()).setState(ServiceState.VISIBLE);
                     BotPvP.getInstance().getGameManager().setGameOwner(null);
                     BotPvP.getInstance().getGameManager().setDefault();
                     BotPvP.getInstance().getGameManager().getBotManager().getBotList().forEach(entity -> entity.remove());
