@@ -41,7 +41,7 @@ public class GameListener implements Listener {
                 player.sendTitle(I18n.format(player, "botpvp.title.botkill.finish.top"), I18n.format(player, "botpvp.title.botkill.finish.bottom"));
 
                 BotPvP.getInstance().getScoreboardManager().sendLobbyScoreboard(player);
-                player.teleport(new Location(Bukkit.getWorld("world"), 0.5, 66, 0.5));
+                player.teleport(new Location(Bukkit.getWorld("world"), -756.2, 34, 210.5, -75, -3));
 
                 if (BotPvP.getInstance().getGameManager().getGameOwner() == player.getUniqueId()) {
 

@@ -19,7 +19,7 @@ public class PlayerJoinListener implements Listener {
         Player player = event.getPlayer();
 
         event.setJoinMessage(null);
-        player.teleport(new Location(Bukkit.getWorld("world"), 0.5, 66, 0.5));
+        player.teleport(new Location(Bukkit.getWorld("world"), -756.2, 34, 210.5, -75, -3));
         player.getInventory().clear();
 
         if(BotPvP.getInstance().getGameManager().getGameState() == GameState.LOBBY || BotPvP.getInstance().getGameManager().getGameState() == GameState.STARTING) {

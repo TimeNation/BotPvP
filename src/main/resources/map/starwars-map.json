@@ -1,0 +1,13 @@
+{
+  "world": "world",
+  "player.location.x": -755.1,
+  "player.location.y": 34.0,
+  "player.location.z": 210.4,
+  "player.location.yaw": -75,
+  "bot.location.x": -729.6,
+  "bot.location.y": 35.0,
+  "bot.location.z": 210.7,
+  "bot.location.yaw": 91,
+  "mapMaterial": "SANDSTONE",
+  "namewithcolor": "§eStarWars"
+}
